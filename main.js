@@ -1,6 +1,7 @@
 // customElements
 import './js/customElements.js'
 import ROOT from './js/root.js'
+console.log("ROOT:", ROOT)
 
 // router
 const mounted = {}
