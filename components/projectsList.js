@@ -39,7 +39,7 @@ export const mount = (component, { projectsList }) => {
                 <div class="techs">
                     ${project.techs.map(t => `
                         <dug-tooltip data-text="${t}">
-                            <img src="/icons/${t}.svg" alt="${t}" />
+                            <img src="./icons/${t}.svg" alt="${t}" />
                         </dug-tooltip>
                     `).join("")}
                 </div>

@@ -1,3 +1,5 @@
+import ROOT from "./root.js"
+
 class DugComponent extends HTMLElement {
     #mount
 
@@ -7,7 +9,7 @@ class DugComponent extends HTMLElement {
 
     async #init() {
         const name = this.getAttribute('data-name')
-        const res = await fetch(`/components/${name}.html`)
+        const res = await fetch(ROOT + `/components/${name}.html`)
         const html = await res.text()
         this.innerHTML = html
         
