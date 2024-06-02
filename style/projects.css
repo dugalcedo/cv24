@@ -1,0 +1,61 @@
+.project {
+    padding: 1rem 0;
+}
+
+.project h3 {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    padding-left: .5rem;
+    margin-bottom: .5rem;
+}
+
+.techs {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+.techs img {
+    width: 25px;
+    filter: grayscale(1);
+    z-index: -10;
+}
+
+.project nav {
+    gap: .5rem;
+    display: flex;
+}
+
+.project button {
+    border: 1px solid black;
+    flex-grow: 1;
+    padding: .5rem;
+    font-size: .75rem;
+}
+
+.project button:hover {
+    background-color: #ccc;
+}
+
+@media screen and (min-width: 600px) {
+    #projectsList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #projectsList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
+    #projectsList {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

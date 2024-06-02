@@ -1,0 +1,76 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    background-color: white;
+    outline: 5px dashed white;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+#mainMenu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+#mainMenu img {
+    width: 40px;
+    height: 40px;
+    transition: all 75ms;
+}
+
+#mainMenu .menu {
+    display: none;
+    align-items: center;
+    /* overflow: hidden; */
+    position: absolute;
+    background-color: white;
+    left: 100%;
+    padding-right: 2rem;
+}
+
+
+
+#mainMenu.open .menu {
+    display: flex;
+}
+
+#mainMenu img:hover {
+    filter: brightness(0.2);
+    transform: scale(1.05);
+}
+
+#mainMenu ul {
+    display: flex;
+}
+
+#mainMenu a, #mainMenu button {
+    display: block;
+    padding: 0.5rem;
+}
+
+#logo {
+    padding-right: 1rem;
+}
+
+#logo strong {
+    position: relative;
+    top: -5px;
+}
+
+@media screen and (min-width: 1000px) {
+    #mainMenu .menu {
+        display: flex;
+    }
+    #mainMenu button {
+        display: none;
+    }
+}
