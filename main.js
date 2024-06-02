@@ -1,5 +1,6 @@
 // customElements
 import './js/customElements.js'
+import ROOT from './js/root.js'
 
 // router
 const mounted = {}
@@ -19,7 +20,7 @@ const checkRoute = async () => {
 
 const mountPage = async (route) => {
     mounted[route] = document.createElement('dug-route')
-    const res = await fetch(`/pages/${route}.html`)
+    const res = await fetch(ROOT + `/pages/${route}.html`)
     const html = await res.text()
     mounted[route].innerHTML = html
     main.append(mounted[route])
